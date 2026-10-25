@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  color: #30281f;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Néhány egyedi részlet, amit nem érdemes utility classokkal bonyolítani. */
+.hero-shade {
+  background: linear-gradient(90deg, rgba(33, 23, 16, .88), rgba(43, 29, 19, .74) 44%, rgba(40, 28, 19, .12));
+}
+
+.coffee-art {
+  background:
+    radial-gradient(circle at 50% 48%, #ae8055 0 12%, transparent 12.4%),
+    radial-gradient(ellipse at 46% 48%, #4a2d1e 0 25%, transparent 25.5%),
+    linear-gradient(135deg, #e6d7c2, #c8a889);
+}
+
+.coffee-art::before,
+.coffee-art::after {
+  content: '';
+  position: absolute;
+  width: 74px;
+  height: 45px;
+  border: 2px solid rgba(255, 250, 242, .35);
+  border-radius: 50%;
+  transform: rotate(-28deg);
+}
+
+.coffee-art::after {
+  width: 90px;
+  height: 54px;
+  transform: rotate(34deg);
+}
+
+.main-nav.mobile-open {
+  display: flex;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 11px 12px;
+  border: 1px solid #ddd4c8;
+  border-radius: 4px;
+  background: #fffdf9;
+  color: #30281f;
+  font-size: 12px;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #b9653d;
+  box-shadow: 0 0 0 2px rgba(185, 101, 61, .12);
+}
+
+.to-top.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KenyérMűhely Kft. – természetes kovászos kenyerek és kézműves péksütemények Budapesten.">
+  <title>KenyérMűhely | Kovászból, türelemmel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#f7f3eb', paper: '#fffdf8', ink: '#30281f', muted: '#756b5d',
+              brown: '#754b31', 'brown-dark': '#4b3021', rust: '#b9653d', line: '#e6ded1',
+              leaf: '#58644b'
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'Arial', 'sans-serif'],
+              serif: ['Playfair Display', 'Georgia', 'serif']
+            },
+            boxShadow: { warm: '0 14px 38px rgba(55,39,25,.09)' }
+          }
+        }
+      };
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body class="m-0 bg-paper font-sans leading-relaxed text-ink">
+  <header class="sticky top-0 z-20 flex h-[82px] items-center justify-between gap-6 border-b border-brown/10 bg-paper/95 px-6 backdrop-blur md:px-[5%]">
+    <a class="flex shrink-0 items-center gap-2.5 text-[19px] font-bold leading-tight tracking-tight" href="#kezdo" aria-label="KenyérMűhely – kezdőlap">
+      <span class="text-[31px] saturate-75" aria-hidden="true">🌾</span>
+      <span>Kenyér<span class="font-medium text-rust">Műhely</span><small class="mt-1 block text-[8px] font-bold tracking-[2px] text-muted">KÉZMŰVES PÉKSÉG</small></span>
+    </a>
+
+    <button class="z-30 rounded p-2 md:hidden" id="menuToggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mainNav">
+      <span class="mb-1.5 block h-0.5 w-6 bg-brown-dark"></span><span class="mb-1.5 block h-0.5 w-6 bg-brown-dark"></span><span class="block h-0.5 w-6 bg-brown-dark"></span>
+    </button>
+    <nav class="main-nav absolute left-0 right-0 top-[81px] hidden flex-col gap-0 border-b border-line bg-paper px-6 pb-5 pt-3 text-sm font-semibold text-[#5c5146] shadow-warm md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none" id="mainNav" aria-label="Fő navigáció">
+      <a class="py-3 transition hover:text-rust md:py-2" href="#kinalat">Kínálat</a>
+      <a class="py-3 transition hover:text-rust md:py-2" href="#rolunk">Rólunk</a>
+      <a class="py-3 transition hover:text-rust md:py-2" href="#rendeles">Egyedi rendelések</a>
+      <a class="py-3 transition hover:text-rust md:py-2" href="#kapcsolat">Kapcsolat</a>
+      <a class="rounded-md bg-brown px-4 py-3 text-center text-white transition hover:bg-brown-dark md:py-2.5" href="#visszajelzes">Visszajelzés</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero relative flex min-h-[610px] items-center overflow-hidden bg-[#3d2c20] text-white" id="kezdo">
+      <img class="absolute inset-0 h-full w-full object-cover object-[center_53%] saturate-[.82]" src="assets/kovaszos-kenyer.jpeg" alt="Frissen sült kovászos kenyér a vágódeszkán">
+      <div class="hero-shade absolute inset-0"></div>
+      <div class="relative z-10 mx-auto w-[90%] max-w-6xl py-20 md:py-[90px]">
+        <p class="mb-4 text-[10px] font-bold uppercase tracking-[2.2px] text-[#f0bd8e]">Hagyományos ízek · Helyi alapanyagok</p>
+        <h1 class="mb-5 max-w-2xl font-serif text-5xl font-semibold leading-[1.12] tracking-tight sm:text-6xl lg:text-[76px]">A jó kenyérhez<br><em class="font-medium text-[#dba276]">idő kell.</em></h1>
+        <p class="mb-7 max-w-lg text-sm leading-8 text-[#f4eee6] md:text-base">Természetes vadkovász, hosszú érlelés és frissen sült pékáru – minden nap egy kicsit lassabban, odafigyelve.</p>
+        <div class="flex flex-wrap gap-3">
+          <a class="inline-flex items-center justify-center gap-4 rounded bg-rust px-5 py-3.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#9e4e2b]" href="#kinalat">Megnézem a kínálatot <span aria-hidden="true">↗</span></a>
+          <a class="inline-flex items-center justify-center gap-4 rounded border border-white/60 bg-white/5 px-5 py-3.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10" href="#rolunk">A műhelyről</a>
+        </div>
+        <div class="mt-9 flex items-center gap-2.5 text-[11px] text-[#e2d6c9]"><span class="h-2 w-2 rounded-full bg-[#dba276]"></span> Adalékmentes szemlélet, természetes kovász</div>
+      </div>
+      <div class="hero-stamp absolute bottom-7 right-[7%] z-10 flex h-[82px] w-[82px] rotate-2 flex-col items-center justify-center rounded-full border border-[#fff2df]/75 text-center text-[6px] leading-[1.8] tracking-wider text-[#fff2df] outline outline-1 outline-[#fff2df]/40 outline-offset-[5px] sm:bottom-12 sm:right-[9%] sm:h-[118px] sm:w-[118px] sm:rotate-[8deg] sm:text-[9px]">LASSAN<br><span class="font-serif text-xs italic sm:text-[17px]">ÉRLELVE</span><br>FRISSEN SÜTVE</div>
+    </section>
+
+    <section class="grid grid-cols-1 gap-5 border-b border-line bg-cream px-[8%] py-6 md:grid-cols-3 md:justify-items-center md:gap-8 md:px-[5%] md:py-7" aria-label="Alapelveink">
+      <div class="flex items-center gap-3"><span class="font-serif text-[27px] text-rust">✳</span><span><strong class="block text-xs">Természetes kovász</strong><small class="mt-1 block text-[10px] text-muted">Hosszú érlelés, karakteres íz</small></span></div>
+      <div class="flex items-center gap-3"><span class="font-serif text-[27px] text-rust">⌂</span><span><strong class="block text-xs">Helyi alapanyagok</strong><small class="mt-1 block text-[10px] text-muted">Kistermelőket részesítünk előnyben</small></span></div>
+      <div class="flex items-center gap-3"><span class="font-serif text-[27px] text-rust">♡</span><span><strong class="block text-xs">Gondos kézimunka</strong><small class="mt-1 block text-[10px] text-muted">Minőség a mennyiség helyett</small></span></div>
+    </section>
+
+    <section class="mx-auto w-[90%] max-w-6xl py-16 md:py-24" id="kinalat">
+      <div class="mb-8 flex flex-col gap-4 md:mb-9 md:flex-row md:items-end md:justify-between">
+        <div><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-rust">A pultból</p><h2 class="font-serif text-4xl font-semibold leading-tight tracking-tight md:text-[45px]">Friss kedvencek</h2></div>
+        <p class="max-w-sm text-[13px] leading-7 text-muted">Egyszerű alapanyagok, jól bevált receptek és egy csipet türelem. Ezeket találod nálunk.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3 max-[380px]:grid-cols-1 min-[381px]:gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+        <article class="group overflow-hidden rounded-lg border border-line bg-white transition duration-200 hover:-translate-y-1 hover:shadow-warm">
+          <div class="relative h-40 overflow-hidden bg-[#eee4d5] sm:h-48 lg:h-[230px]"><img class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/kovaszos-kenyer.jpeg" alt="Kovászos fehér kenyér" loading="lazy"><span class="absolute left-3 top-3 rounded bg-paper px-2 py-1 text-[9px] uppercase tracking-wide text-brown">Minden nap</span></div>
+          <div class="p-3.5 sm:p-5"><div class="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"><h3 class="font-serif text-base font-semibold leading-snug sm:text-lg">Kovászos fehér kenyér</h3><span class="whitespace-nowrap pt-0.5 text-xs font-bold text-rust">1 200 Ft</span></div><p class="mb-3 min-h-[68px] text-[10px] leading-6 text-muted sm:min-h-[42px] sm:text-[11px]">1 kg · 24 órás hideg érlelés, ropogós héj és puha bélzet.</p><a href="#rendeles" class="inline-flex items-center gap-2 text-[11px] font-bold text-brown">Érdekel <span class="text-base transition group-hover:translate-x-1">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-lg border border-line bg-white transition duration-200 hover:-translate-y-1 hover:shadow-warm">
+          <div class="relative h-40 overflow-hidden bg-[#eee4d5] sm:h-48 lg:h-[230px]"><img class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/rozskenyer.png" alt="Teljes kiőrlésű rozskenyér" loading="lazy"></div>
+          <div class="p-3.5 sm:p-5"><div class="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"><h3 class="font-serif text-base font-semibold leading-snug sm:text-lg">Teljes kiőrlésű rozskenyér</h3><span class="whitespace-nowrap pt-0.5 text-xs font-bold text-rust">950 Ft</span></div><p class="mb-3 min-h-[68px] text-[10px] leading-6 text-muted sm:min-h-[42px] sm:text-[11px]">750 g · Tartalmas, rostban gazdag választás a mindennapokra.</p><a href="#rendeles" class="inline-flex items-center gap-2 text-[11px] font-bold text-brown">Érdekel <span class="text-base transition group-hover:translate-x-1">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-lg border border-line bg-white transition duration-200 hover:-translate-y-1 hover:shadow-warm">
+          <div class="relative h-40 overflow-hidden bg-[#eee4d5] sm:h-48 lg:h-[230px]"><img class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/croissant.jpeg" alt="Aranybarnára sült vajas croissant" loading="lazy"><span class="absolute left-3 top-3 rounded bg-paper px-2 py-1 text-[9px] uppercase tracking-wide text-brown">Kézműves</span></div>
+          <div class="p-3.5 sm:p-5"><div class="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"><h3 class="font-serif text-base font-semibold leading-snug sm:text-lg">Vajas croissant</h3><span class="whitespace-nowrap pt-0.5 text-xs font-bold text-rust">450 Ft</span></div><p class="mb-3 min-h-[68px] text-[10px] leading-6 text-muted sm:min-h-[42px] sm:text-[11px]">1 db · Minőségi vajjal hajtogatott, kívül roppanós, belül omlós.</p><a href="#rendeles" class="inline-flex items-center gap-2 text-[11px] font-bold text-brown">Érdekel <span class="text-base transition group-hover:translate-x-1">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-lg border border-line bg-white transition duration-200 hover:-translate-y-1 hover:shadow-warm">
+          <div class="relative h-40 overflow-hidden bg-[#eee4d5] sm:h-48 lg:h-[230px]"><img class="h-full w-full object-cover transition duration-300 group-hover:scale-105" src="assets/csiga.jpeg" alt="Fahéjas és kakaós csigák" loading="lazy"></div>
+          <div class="p-3.5 sm:p-5"><div class="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"><h3 class="font-serif text-base font-semibold leading-snug sm:text-lg">Fahéjas / kakaós csiga</h3><span class="whitespace-nowrap pt-0.5 text-xs font-bold text-rust">500 Ft</span></div><p class="mb-3 min-h-[68px] text-[10px] leading-6 text-muted sm:min-h-[42px] sm:text-[11px]">1 db · Hagyományos kelesztéssel, bőséges töltelékkel.</p><a href="#rendeles" class="inline-flex items-center gap-2 text-[11px] font-bold text-brown">Érdekel <span class="text-base transition group-hover:translate-x-1">→</span></a></div>
+        </article>
+        <article class="group overflow-hidden rounded-lg border border-line bg-white transition duration-200 hover:-translate-y-1 hover:shadow-warm">
+          <div class="coffee-art relative flex h-40 flex-col items-center justify-center gap-2 overflow-hidden text-[#fffaf2] sm:h-48 lg:h-[230px]" role="img" aria-label="Szemes kávé illusztráció"><span class="relative z-10 text-5xl drop-shadow-lg">☕</span><small class="relative z-10 text-[8px] tracking-widest">FRISSEN ŐRÖLT HANGULAT</small></div>
+          <div class="p-3.5 sm:p-5"><div class="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"><h3 class="font-serif text-base font-semibold leading-snug sm:text-lg">Helyi pörkölésű kávé</h3><span class="whitespace-nowrap pt-0.5 text-xs font-bold text-rust">2 400 Ft</span></div><p class="mb-3 min-h-[68px] text-[10px] leading-6 text-muted sm:min-h-[42px] sm:text-[11px]">250 g · Szemes kávé a reggeli kenyér mellé.</p><a href="#rendeles" class="inline-flex items-center gap-2 text-[11px] font-bold text-brown">Érdekel <span class="text-base transition group-hover:translate-x-1">→</span></a></div>
+        </article>
+      </div>
+      <p class="mt-5 text-right text-[10px] text-muted">Az árak tájékoztató jellegűek. A napi készletről érdemes előre érdeklődni.</p>
+    </section>
+
+    <section class="grid items-center gap-8 bg-cream px-6 py-16 md:grid-cols-2 md:gap-16 md:px-[5%] md:py-20" id="rolunk">
+      <div class="relative mx-auto w-full max-w-lg md:justify-self-end"><img class="h-[350px] w-full rounded object-cover md:h-[490px]" src="assets/rozskenyer.png" alt="Magokkal szórt rozskenyér" loading="lazy"><span class="absolute -bottom-3 left-2 bg-rust px-4 py-3 font-serif text-sm italic text-white shadow-warm sm:-left-4 sm:bottom-5">Kovász · Liszt · Víz · Idő</span></div>
+      <div class="mx-auto max-w-lg md:mx-0"><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-rust">Kis műhely, nagy odafigyelés</p><h2 class="mb-6 font-serif text-4xl font-semibold leading-tight tracking-tight md:text-[45px]">Nem siettetjük,<br><em class="font-medium text-rust">inkább megvárjuk.</em></h2><p class="mb-4 text-[13px] leading-7 text-muted">A KenyérMűhely egy fiktív, 2026-ban megálmodott mikrovállalkozás. Azért hoztuk létre, hogy a hagyományos, adalékmentes, hosszan érlelt kovászos pékáruk ízvilágát közelebb hozzuk a mindennapokhoz.</p><p class="text-[13px] leading-7 text-muted">Saját nevelésű vadkovásszal dolgozunk, és a helyi beszállítókat részesítjük előnyben. Fontos számunkra az átláthatóság, a higiénia és az, hogy a vásárlók bepillanthassanak a sütés folyamatába.</p><div class="mt-6 grid gap-3 border-t border-[#ded4c5] pt-5"><span class="flex items-center gap-4 text-xs font-semibold"><b class="text-[10px] tracking-widest text-rust">01</b> Természetes alapanyagok</span><span class="flex items-center gap-4 text-xs font-semibold"><b class="text-[10px] tracking-widest text-rust">02</b> Hosszú érlelés</span><span class="flex items-center gap-4 text-xs font-semibold"><b class="text-[10px] tracking-widest text-rust">03</b> HACCP-szemlélet</span></div></div>
+    </section>
+
+    <section class="grid items-center gap-9 bg-brown-dark px-6 py-16 text-white md:grid-cols-[1.05fr_.95fr] md:gap-12 md:px-[5%] md:py-[76px]" id="rendeles">
+      <div class="mx-auto max-w-lg md:justify-self-end"><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-[#e7b28a]">Különleges alkalmakra</p><h2 class="mb-5 font-serif text-4xl font-semibold leading-tight tracking-tight md:text-[45px]">Te hozod az alkalmat.<br><em class="font-medium text-[#dba276]">Mi a finomságokat.</em></h2><p class="mb-7 max-w-lg text-[13px] leading-7 text-[#e4d9cf]">Családi eseményre, esküvőre vagy céges rendezvényre sós és édes péksütemény-tálakat is készítünk. Írd meg, milyen alkalomra és körülbelül hány főre tervezel, és egyeztetjük a részleteket.</p><a class="inline-flex items-center justify-center gap-4 rounded bg-paper px-5 py-3.5 text-xs font-bold text-brown-dark transition hover:-translate-y-0.5 hover:bg-[#f1e4d3]" href="mailto:info@kenuermuhely.hu?subject=Egyedi%20rendeles">Ajánlatot kérek <span aria-hidden="true">↗</span></a></div>
+      <div class="relative mx-auto w-full max-w-lg md:mx-0"><img class="h-[290px] w-full rounded object-cover sm:h-[355px]" src="assets/croissant.jpeg" alt="Frissen sült croissant közelről" loading="lazy"><div class="absolute -bottom-3 right-0 grid h-[83px] w-[83px] rotate-[7deg] place-content-center rounded-full bg-[#d9ab7b] text-center font-serif text-[13px] italic leading-snug text-brown-dark sm:-right-4 sm:h-[98px] sm:w-[98px] sm:text-base">Sós és<br>édes falatok</div></div>
+    </section>
+
+    <section class="mx-auto w-[90%] max-w-6xl py-16 md:py-24" id="visszajelzes">
+      <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"><div><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-rust">Segíts jobbá tenni</p><h2 class="font-serif text-4xl font-semibold leading-tight tracking-tight md:text-[45px]">Mesélj a tapasztalatodról</h2></div><p class="max-w-sm text-[13px] leading-7 text-muted">Pár rövid kérdés, amivel segítesz nekünk, hogy a következő kenyér még jobb legyen.</p></div>
+      <form id="feedbackForm" class="rounded-lg border border-line bg-white p-5 shadow-[0_10px_30px_rgba(55,39,25,.035)] sm:p-7">
+        <div class="mb-6 flex justify-between gap-5 border-b border-line pb-4 text-[9px] font-bold tracking-widest text-brown"><span>VÁSÁRLÓI VISSZAJELZÉS</span><span class="font-normal normal-case tracking-normal text-muted">* kötelező mező</span></div>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+          <label class="block text-xs font-semibold">Neved <small class="ml-1 text-[10px] font-normal text-muted">(nem kötelező)</small><input class="form-control" type="text" name="name" placeholder="Hogy szólíthatunk?"></label>
+          <label class="block text-xs font-semibold">Mit kóstoltál nálunk? <span class="text-rust">*</span><select class="form-control" name="product" required><option value="">Válassz a listából</option><option>Kovászos fehér kenyér</option><option>Rozskenyér</option><option>Croissant</option><option>Fahéjas / kakaós csiga</option><option>Kávé</option><option>Többféle termék</option></select></label>
+          <fieldset class="min-w-0 border-0 p-0 text-xs font-semibold"><legend>Mennyire ízlett a termék? <span class="text-rust">*</span></legend><div class="rating-options mt-2 flex gap-2"><label><input class="peer sr-only" type="radio" name="taste" value="1" required><span class="grid h-9 w-9 cursor-pointer place-items-center rounded border border-[#ddd4c8] bg-paper text-brown peer-checked:border-brown peer-checked:bg-brown peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-rust">1</span></label><label><input class="peer sr-only" type="radio" name="taste" value="2"><span class="grid h-9 w-9 cursor-pointer place-items-center rounded border border-[#ddd4c8] bg-paper text-brown peer-checked:border-brown peer-checked:bg-brown peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-rust">2</span></label><label><input class="peer sr-only" type="radio" name="taste" value="3"><span class="grid h-9 w-9 cursor-pointer place-items-center rounded border border-[#ddd4c8] bg-paper text-brown peer-checked:border-brown peer-checked:bg-brown peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-rust">3</span></label><label><input class="peer sr-only" type="radio" name="taste" value="4"><span class="grid h-9 w-9 cursor-pointer place-items-center rounded border border-[#ddd4c8] bg-paper text-brown peer-checked:border-brown peer-checked:bg-brown peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-rust">4</span></label><label><input class="peer sr-only" type="radio" name="taste" value="5"><span class="grid h-9 w-9 cursor-pointer place-items-center rounded border border-[#ddd4c8] bg-paper text-brown peer-checked:border-brown peer-checked:bg-brown peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-rust">5</span></label></div><small class="mt-2 block text-[10px] font-normal text-muted">1 = egyáltalán nem · 5 = nagyon</small></fieldset>
+          <label class="block text-xs font-semibold">Mennyire volt friss? <span class="text-rust">*</span><select class="form-control" name="freshness" required><option value="">Válassz választ</option><option>Nagyon friss</option><option>Megfelelően friss</option><option>Lehetne frissebb</option></select></label>
+          <label class="block text-xs font-semibold">Ár-érték arány <span class="text-rust">*</span><select class="form-control" name="value" required><option value="">Válassz választ</option><option>Nagyon jó</option><option>Megfelelő</option><option>Lehetne kedvezőbb</option></select></label>
+          <fieldset class="min-w-0 border-0 p-0 text-xs font-semibold"><legend>Ajánlanád másoknak is? <span class="text-rust">*</span></legend><div class="mt-3 flex flex-wrap gap-5 text-muted"><label class="font-normal"><input class="mr-1 accent-rust" type="radio" name="recommend" value="Igen" required> Igen</label><label class="font-normal"><input class="mr-1 accent-rust" type="radio" name="recommend" value="Talán"> Talán</label><label class="font-normal"><input class="mr-1 accent-rust" type="radio" name="recommend" value="Nem"> Nem</label></div></fieldset>
+          <label class="block text-xs font-semibold sm:col-span-2">Mi az, amin szerinted javíthatnánk?<small class="ml-1 text-[10px] font-normal text-muted">(nem kötelező)</small><textarea class="form-control resize-y" name="message" rows="3" placeholder="Bármilyen ötletet szívesen fogadunk..."></textarea></label>
+        </div>
+        <div class="mt-6 flex flex-col items-start gap-5 border-t border-line pt-5 sm:flex-row sm:items-center sm:justify-between"><p class="max-w-sm text-[10px] leading-relaxed text-muted">Bemutató űrlap: a válaszok ezen a weboldalon nem kerülnek szerverre mentésre.</p><button class="inline-flex w-full items-center justify-center gap-4 rounded bg-rust px-5 py-3.5 text-xs font-bold text-white transition hover:bg-[#9e4e2b] sm:w-auto" type="submit">Visszajelzés elküldése <span aria-hidden="true">→</span></button></div>
+        <p id="formMessage" class="mt-3 text-xs font-bold text-leaf" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="grid items-center gap-8 bg-[#efe5d6] px-6 py-16 md:grid-cols-2 md:gap-14 md:px-[5%] md:py-20" id="kapcsolat">
+      <div class="mx-auto w-full max-w-lg md:justify-self-end"><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-rust">Várunk szeretettel</p><h2 class="mb-5 font-serif text-4xl font-semibold leading-tight tracking-tight md:text-[45px]">Találkozzunk<br><em class="font-medium text-rust">a műhelynél.</em></h2><p class="mb-6 max-w-md text-[13px] leading-7 text-muted">Kérdésed van, félretennél egy kenyeret vagy rendezvényre rendelnél? Keress minket bátran!</p><a class="my-3 flex items-center gap-3 text-xs font-semibold" href="https://maps.google.com/?q=1011+Budapest+P%C3%A9+p%C3%A9k+utca+12" target="_blank" rel="noreferrer"><span class="grid h-[29px] w-[29px] place-items-center rounded-full border border-[#d3c3b0] text-sm text-rust">⌖</span>1011 Budapest, Pé pék utca 12.</a><a class="my-3 flex items-center gap-3 text-xs font-semibold" href="mailto:info@kenuermuhely.hu"><span class="grid h-[29px] w-[29px] place-items-center rounded-full border border-[#d3c3b0] text-sm text-rust">✉</span>info@kenuermuhely.hu</a><a class="my-3 flex items-center gap-3 text-xs font-semibold" href="tel:+36301234567"><span class="grid h-[29px] w-[29px] place-items-center rounded-full border border-[#d3c3b0] text-sm text-rust">☎</span>+36 30 123 4567</a></div>
+      <div class="mx-auto w-full max-w-lg rounded-md bg-paper p-6 shadow-warm sm:p-8"><div class="mb-3 flex items-center gap-3 border-b border-line pb-4"><span class="text-2xl text-rust">◷</span><h3 class="font-serif text-2xl font-semibold">Nyitvatartás</h3></div><div class="flex justify-between gap-4 border-b border-dashed border-line py-3 text-[11px]"><span>Hétfő – Péntek</span><strong>06:00 – 18:00</strong></div><div class="flex justify-between gap-4 border-b border-dashed border-line py-3 text-[11px]"><span>Szombat</span><strong>07:00 – 13:00</strong></div><div class="flex justify-between gap-4 py-3 text-[11px] text-muted"><span>Vasárnap</span><strong>Zárva</strong></div><div class="mt-3 rounded-sm bg-cream p-3 text-[10px] leading-relaxed text-muted">A népszerű termékek gyorsan elfogyhatnak, ezért rendelés előtt érdemes érdeklődni.</div></div>
+    </section>
+
+    <section class="grid items-center gap-6 bg-paper px-6 py-14 md:grid-cols-[.9fr_1.1fr] md:gap-14 md:px-[5%] md:py-16" aria-labelledby="materialsTitle">
+      <div><p class="mb-3 text-[10px] font-bold uppercase tracking-[2.2px] text-rust">A projekt anyagai</p><h2 class="mb-4 font-serif text-3xl font-semibold leading-tight tracking-tight" id="materialsTitle">További dokumentumok</h2><p class="max-w-md text-xs leading-7 text-muted">A weboldal a KenyérMűhely projekt része. Az alábbi fájlok a részletes cégbemutatót és a 2026-os, oktatási célú forgalmi kimutatást tartalmazzák.</p></div>
+      <div class="grid gap-3"><a class="flex items-center gap-3.5 rounded border border-line p-3.5 transition hover:translate-x-1 hover:border-[#c4a58c] sm:px-4" href="dokumentumok/KenyerMuhely_cegbemutato.odt" download><span class="grid h-11 w-10 shrink-0 place-items-center rounded bg-[#f5e2d7] text-[10px] font-bold text-[#9a4c2d]">ODT</span><span class="flex-1"><strong class="block text-xs">Cégbemutató dokumentum</strong><small class="mt-1 block text-[10px] text-muted">ODT · küldetés, termékkínálat, technológia</small></span><b class="text-lg text-rust">↓</b></a><a class="flex items-center gap-3.5 rounded border border-line p-3.5 transition hover:translate-x-1 hover:border-[#c4a58c] sm:px-4" href="dokumentumok/KenyerMuhely_forgalmi_kimutatas.xlsx" download><span class="grid h-11 w-10 shrink-0 place-items-center rounded bg-[#e3eadd] text-[10px] font-bold text-leaf">XLSX</span><span class="flex-1"><strong class="block text-xs">Forgalmi kimutatás 2026</strong><small class="mt-1 block text-[10px] text-muted">XLSX · havi bevételek, kiadások és összesítés</small></span><b class="text-lg text-rust">↓</b></a></div>
+    </section>
+  </main>
+
+  <footer class="flex flex-col items-start gap-3 bg-[#29221b] px-6 py-8 text-[#d9cfc3] md:flex-row md:items-center md:justify-between md:gap-5 md:px-[5%]">
+    <a class="flex items-center gap-2.5 text-base font-bold text-white" href="#kezdo"><span class="text-[26px]" aria-hidden="true">🌾</span><span>Kenyér<span class="font-medium text-[#e0a27e]">Műhely</span><small class="mt-1 block text-[7px] tracking-widest text-[#c0b2a3]">KÉZMŰVES PÉKSÉG</small></span></a>
+    <p class="font-serif text-sm italic">Jó kenyér, jó alapanyagokból, jó szívvel.</p><span class="text-[9px] text-[#b8aa9b]">© <span id="year"></span> KenyérMűhely Kft. · Egyetemi projektmunka</span>
+  </footer>
+  <button id="toTop" class="to-top invisible fixed bottom-5 right-5 z-10 grid h-10 w-10 translate-y-2 place-items-center rounded-full bg-rust text-xl text-white opacity-0 shadow-warm transition-all" aria-label="Vissza az oldal tetejére">↑</button>
+</body>
+</html>
